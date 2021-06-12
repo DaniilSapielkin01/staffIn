@@ -1,0 +1,19 @@
+.loginInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.info {
+  position: relative;
+}
+.info ul {
+}
+
+.image {
+  max-width: 620px;
+}
+@media screen and (max-width: 900px) {
+  .image {
+    margin: auto;
+  }
+}
