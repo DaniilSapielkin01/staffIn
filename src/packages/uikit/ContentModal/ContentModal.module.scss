@@ -1,0 +1,47 @@
+@import "../../../assets/sass/partials/variables";
+
+.modal_content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 350px;
+  min-height: 200px;
+  max-width: 550px;
+
+  .header {
+    margin-bottom: 0.929rem;
+    font-weight: 600;
+    font-size: 1.571rem;
+    line-height: 29px;
+    font-weight: 600;
+    color: $black;
+    padding: 1.429rem 2.143rem;
+
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2.571rem 2.143rem 1.429rem 2.143rem;
+    text-align: center;
+  }
+
+  .close__icon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+
+  .close__escape {
+    position: absolute;
+    font-size: 0.714rem;
+    top: 22px;
+    left: 2px;
+    color: $default-color-text-modal-popup-description;
+  }
+}

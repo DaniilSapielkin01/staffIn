@@ -1,0 +1,23 @@
+.root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 1.5rem 3rem;
+  box-shadow: 0 0 3px 1px rgba(196, 196, 196, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+}
+.header .iconBox img {
+  height: 50px;
+  object-fit: contain;
+}
+
+/*# sourceMappingURL=LoginHeader.module.css.map */

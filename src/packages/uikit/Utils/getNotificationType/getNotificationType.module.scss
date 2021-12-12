@@ -1,0 +1,27 @@
+.iconsSuccess {
+  position: relative;
+  color: #3FC063;
+
+  .iconVector {
+    position: absolute;
+    z-index: 1;
+    top: 23px;
+    right: 24.7px;
+  }
+}
+
+.error {
+  color: #EE4E2B;
+}
+
+.info {
+  color:#006DE7;
+}
+
+.warning {
+  color: #EF9400;
+}
+
+.success {
+  color: #3FC063;
+}

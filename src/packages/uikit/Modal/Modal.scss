@@ -1,0 +1,33 @@
+@import '../../../assets/sass/partials/_variables';
+
+.out-modal {
+  padding: 1.8rem 1.9rem 0 !important;
+}
+
+.out-footer {
+  padding: 1rem !important;
+}
+
+.radio {
+  .custom-control-label::before {
+    border-color: $gray-600;
+  }
+
+  .form-check-label:hover,
+  .custom-control-label:hover,
+  .custom-control-input:hover ~ .custom-control-label {
+    &::before {
+      border-color: $darken-theme-color;
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before {
+    border-color: $gray-600;
+    background-color: $white;
+    color: $darken-theme-color;
+  }
+
+  .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%230b3138'/%3E%3C/svg%3E");
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../../assets/sass/partials/_variables';
+
+.root {
+  padding: 0.429rem 0.714rem;
+  border: 1px solid #E9E9F3;
+  border-radius: 0.286rem;
+
+  &-suffix,
+  &-clear {
+    margin: 0 0.357rem;
+    display: flex;
+    color: $primary-color;
+  }
+
+  &-input > input,
+  &-input > input-focused {
+    outline: 0;
+    font-size: 1rem;
+    color: $primary-color;
+
+    &:focus {
+      border: 0;
+    }
+
+    &[disabled] {
+      background: $gray-200;
+
+      & + .ant-picker-suffix {
+        display: none;
+      }
+    }
+  }
+}

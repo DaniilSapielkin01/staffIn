@@ -1,0 +1,18 @@
+@import '../../../assets/sass/partials/_variables';
+
+.note {
+
+  padding: 4px 12px;
+  border-radius: .25rem;
+  font-size: .8rem;
+
+  &-primary {
+    background: lighten($theme-color, 40);
+    opacity: .5;
+  }
+
+  &-brown {
+    background: #F4D7B3;
+    color: $brown;
+  }
+}

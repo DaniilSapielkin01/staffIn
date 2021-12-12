@@ -1,0 +1,133 @@
+@import '../../../assets/sass/partials/_variables';
+
+.tabs {
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      color: $gray-600;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1rem;
+      list-style: none;
+      cursor: pointer;
+      transition: 200ms;
+      position: relative;
+      padding: 10px 0;
+      text-align: center;
+
+      &.active,
+      &.active:hover,
+      &:hover {
+        color: $darken-theme-color;
+      }
+      &.disabled,
+      &.disabled:hover {
+        color: $gray-600;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &-primary {
+    ul {
+      border-bottom: 1px solid $border-color-light;
+
+      li {
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+          color: $darken-theme-color;
+        }
+
+        &.active {
+          border-bottom: 2px solid $green;
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &-secondary {
+    background-color: $white;
+    border-radius: 0.286rem;
+    border: 1px solid $border-color-light;
+    box-shadow: $dropdown-box-shadow;
+
+    ul {
+      li {
+        &:hover {
+          color: $darken-theme-color;
+        }
+
+        &.active {
+          & > span {
+            position: relative;
+            padding: 0.857rem 0;
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              width: 100%;
+              border-top: 0.214rem solid $green;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-import-table {
+    display: flex;
+    height: 100%;
+
+    ul {
+      width: 130px;
+      padding-top: 30px;
+
+      li {
+        height: 45px;
+        font-size: 0.857rem;
+        color: $primary-color;
+        text-transform: initial;
+        padding-left: 1.429rem;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          background: #F9F9FB;
+        }
+
+        &.active {
+          position: relative;
+          overflow: hidden;
+          border-radius: 10px 0 0 10px;
+          background: #F9F9FB;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: $theme-color;
+          }
+        }
+      }
+    }
+
+    .tabs__panel {
+      width: calc(100% - 130px);
+    }
+  }
+}

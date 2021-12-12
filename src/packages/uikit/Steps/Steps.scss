@@ -1,0 +1,104 @@
+@import '../../../assets/sass/partials/_variables';
+
+.steps {
+  &__step {
+    position: relative;
+
+    &-mark {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 1.375rem;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: calc(50% - 0.625rem);
+        background-color: $darken-theme-color;
+      }
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        right: 0;
+      }
+
+      .cicle {
+        background: url('../../../assets/icons/checked.svg') no-repeat center center;
+        position: relative;
+        width: 1.25rem;
+        height: 1.25rem;
+        border: 2px solid $botticelli-color;
+        display: inline-table;
+        border-radius: 50%;
+      }
+    }
+
+    &-title {
+      color: $darken-theme-color;
+      text-transform: uppercase;
+      font-size: 0.813rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+
+    &.active {
+      .cicle {
+        background: transparent;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 0.5rem;
+          height: 0.5rem;
+          border-radius: 50%;
+          background-color: $darken-theme-color;
+        }
+      }
+
+      & ~ .steps__step {
+        .steps__step-mark {
+          &::before,
+          &::after {
+            background-color: $botticelli-color;
+            width: calc(50% - 0.313rem);
+          }
+
+          .cicle {
+            width: 0.625rem;
+            height: 0.625rem;
+            background: transparent;
+
+            &::before {
+              display: none;
+            }
+          }
+        }
+
+        .steps__step-title {
+          color: $hit-gray-color;
+        }
+      }
+
+      .steps__step {
+        &-mark::after {
+          background-color: $botticelli-color;
+        }
+      }
+    }
+
+    &:first-child .steps__step-mark::before,
+    &:last-child .steps__step-mark::after {
+      display: none;
+    }
+  }
+}

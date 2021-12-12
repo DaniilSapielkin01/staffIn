@@ -1,0 +1,163 @@
+@import '../../../assets/sass/partials/_variables';
+
+.table {
+  margin: 1.429rem 0;
+  padding: 0;
+  display: block;
+  overflow: auto;
+  height: 100%;
+
+  &-container {
+    border-spacing: 0;
+
+    .thead {
+      background-color: $white;
+
+      .tr {
+        .th {
+          text-transform: uppercase;
+          font-family: Catamaran, serif;
+          font-size: 0.76rem;
+          line-height: 0.9rem;
+          color: $secondary-color;
+          white-space: nowrap;
+          padding: 0 1rem;
+          .sorting {
+            cursor: pointer;
+            position: relative;
+            height: 12px;
+            width: 8px;
+            margin-left: 0.714rem;
+
+            &.up {
+              &::before {
+                border-bottom-color: #333;
+              }
+            }
+
+            &.down {
+              &::after {
+                border-top-color: #333;
+              }
+            }
+
+            &::before {
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 30%;
+              top: 0;
+              left: 0;
+              right: 0;
+              border-left: 4px solid transparent;
+              border-right: 4px solid transparent;
+              border-bottom: 4px solid silver;
+            }
+
+            &::after {
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 30%;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              border-top: 4px solid silver;
+              border-left: 4px solid transparent;
+              border-right: 4px solid transparent;
+            }
+          }
+        }
+      }
+    }
+
+    .tbody {
+      background-color: $white;
+      .tr {
+        &:hover {
+          cursor: pointer;
+          background: lighten($primary, 59);
+        }
+      }
+    }
+
+    .tr {
+      background-color: $white;
+      border-bottom: 1px solid $border-color-light;
+
+      :last-child {
+        .td {
+          border-bottom: 0;
+        }
+      }
+
+      &.selected {
+        background: lighten($primary, 59);
+      }
+
+      &:hover {
+        .btn-edit-module-list {
+          opacity: 1;
+        }
+      }
+    }
+
+    .th {
+      overflow: hidden;
+    }
+
+    .th,
+    .td {
+      padding: 20px 1.5rem;
+      position: relative;
+      margin: 0;
+      align-self: center;
+
+      .is-drag {
+        border-left: 3px solid $border-color-select;
+      }
+
+      .draggable,
+      .non-draggable {
+        padding: 20px 5px;
+        display: block;
+        width: 100%;
+      }
+
+      .draggable {
+        cursor: move;
+      }
+
+      &.is-drag {
+        border-left: 3px solid $border-color-select;
+      }
+
+      .draggable {
+        cursor: move;
+        padding: 1.429rem 0.357rem;
+        display: block;
+        margin-right: 0.571rem;
+      }
+
+      .resizer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 6px;
+        margin: 0 0.143rem;
+        background-color: $white;
+        z-index: 1;
+        touch-action: none;
+
+        &:hover {
+          background-color: $border-color-light;
+        }
+
+        &.isResizing {
+          background: $border-color-select;
+        }
+      }
+    }
+  }
+}

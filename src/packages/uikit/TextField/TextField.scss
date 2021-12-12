@@ -1,0 +1,98 @@
+@import '../../../assets/sass/partials/_variables';
+
+.c-text-field {
+  .input {
+    background: #FDFDFD;
+  }
+  &__w-input {
+    width: 100%;
+    min-height: 34px;
+    padding: 0.1rem 0.75rem;
+    border: 1px solid $gray-400;
+    border-radius: 0.286rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    background: #FDFDFD;
+
+    input {
+      width: 100%;
+
+      &[disabled] {
+        background-color: $gray-200;
+      }
+    }
+
+    &.disabled,
+    &.readonly {
+      background-color: $gray-200;
+      opacity: 1;
+    }
+
+    &.error {
+      border-bottom-left-radius: 0;
+    }
+
+    &_icon-error {
+      display: flex;
+      position: absolute;
+      height: 100%;
+      right: 1.071rem;
+      top: 0;
+      align-items: center;
+    }
+
+  }
+  &_error-messages {
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    border-radius: 0 0 0.25rem 0.25rem;
+    min-height: 28px;
+    padding: 0.286rem 0.714rem;
+    background: $error-color;
+    color: white;
+    font-size: 0.929rem;
+    left: 0px;
+  }
+
+  .inside {
+    padding: 1.786rem 1rem 0.571rem;
+  }
+
+  &__is-invalid {
+    color: $error-color;
+    border: 1px solid $error-color;
+  }
+
+  input {
+    border: none;
+    color: $darken-theme-color;
+    background: #FDFDFD;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+}
+
+.text-field_orientation-inside {
+  position: relative;
+  flex-direction: column;
+
+  .text-field_lable_orientation-inside {
+    position: absolute;
+    font-weight: 600;
+    top: 11px;
+    left: 16px;
+    z-index: 2;
+    font-size: 0.857rem;
+    color: #8A8FA0;
+    letter-spacing: -0.3px;
+  }
+}

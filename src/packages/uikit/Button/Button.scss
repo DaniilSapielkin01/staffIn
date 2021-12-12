@@ -1,0 +1,222 @@
+@import '../../../assets/sass/partials/_variables';
+
+.button {
+  text-align: center;
+  border: none;
+  transition: $btn-transition;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.714rem;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  // Themes
+  &.button-primary {
+    color: $white;
+    background: $theme-color;
+    span {
+      color: $white;
+    }
+
+    &:hover {
+      background-color: $theme-color;
+    }
+
+    &:active {
+      background-color: $theme-color;
+    }
+
+    &:focus {
+      background-color: $theme-color;
+    }
+  }
+
+  &.outline {
+    background-color: $white;
+    color: $theme-color;
+    border: 1px solid $theme-color;
+
+    &:hover, &:focus, &:active {
+      background-color: $white;
+    }
+  }
+
+  &.button-secondary {
+    background-color: $gray-bg-1;
+    color: $gray-600;
+
+    .spinner {
+      border-color: rgba(0,0,0, .2);
+      border-top-color: rgba(0,0,0, .7);
+    }
+  }
+
+  &.button-secondary-sign {
+    background-color: #C5C5C5;
+    color: $white;
+    span {
+      color: $white;
+    }
+
+    .spinner {
+      border-color: rgba(0,0,0, .2);
+      border-top-color: rgba(0,0,0, .7);
+    }
+  }
+
+  &.button-red {
+    background-color: $red;
+    color: $white;
+
+    &:not(:disabled) {
+      box-shadow: $btn-red-box-shadow;
+    }
+
+    &:hover {
+      background-color: $rufous-color;
+      box-shadow: $btn-other-box-shadow;
+    }
+
+    &:active {
+      background-color: $red;
+      box-shadow: $btn-red-box-shadow;
+    }
+  }
+
+  &.button-brown {
+    background-color: $brown;
+    color: $white;
+
+    &:not(:disabled) {
+      box-shadow: $btn-dis-box-shadow;
+    }
+
+    &:hover {
+      background-color: $raw-umber-color;
+      box-shadow: $btn-other-box-shadow;
+    }
+
+    &:active {
+      background-color: $brown;
+      box-shadow: $btn-red-box-shadow;
+    }
+  }
+
+  &.button-green {
+    background-color: $green;
+    color: $white;
+
+    &:not(:disabled) {
+      box-shadow: $btn-green-box-shadow;
+    }
+
+    &:hover {
+      background-color: $green-light;
+      box-shadow: $btn-other-box-shadow;
+    }
+
+    &:active {
+      background-color: $green;
+      box-shadow: $btn-red-box-shadow;
+    }
+  }
+
+  &.button-transparent {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  &.button-white {
+    background-color: transparent !important;
+    color: #666A78;
+    box-shadow: none !important;
+    border: 1px solid #EBEBF8;
+    border-radius: 10px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    &.button-primary:hover {
+      box-shadow: none !important;
+      background-color: $theme-color;
+    }
+
+    &.button-secondary {
+      box-shadow: none !important;
+    }
+
+    &.button-red {
+      background-color: $red !important;
+      box-shadow: none !important;
+    }
+  }
+
+  &.fixed {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100px;
+  }
+
+  // Sizes
+  &.button-sm {
+    padding: 0.313rem .75rem;
+
+    &.fixed {
+      width: 80px;
+    }
+  }
+
+  &.button-md {
+    padding: 0.65rem 1.25rem;
+
+    &.fixed {
+      width: 80px;
+    }
+  }
+
+  &.button-lg {
+    font-size: 0.75rem;
+    padding: 0.5rem 1.625rem;
+
+    &.fixed {
+      width: 100px;
+    }
+  }
+
+  &.button-xlg {
+    font-size: 0.938rem;
+    padding: 0.902rem 1.6rem;
+
+    &.fixed {
+      width: 220px;
+    }
+  }
+
+  &.button-max {
+    font-size: 1.143rem;
+    padding: 1.179rem 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      font-size: 1.143rem;
+    }
+  }
+
+  .spinner {
+    position: relative;
+    height: 12px;
+    width: 12px;
+    margin: 0 auto;
+    left: auto;
+    top: auto;
+    border-color: rgba(255,255,255, .2);
+    border-top-color: rgba(255,255,255, .85);
+  }
+}

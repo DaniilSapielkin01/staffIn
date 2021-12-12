@@ -1,0 +1,11 @@
+{
+  "name": "@customary/uikit",
+  "version": "0.0.1",
+  "description": "UI Kit with reusable components",
+  "main": "index.js",
+  "dependencies": {
+    "@customary/theme": "0.0.1",
+    "antd": "^4.1.4",
+    "moment": "2.24.0"
+  }
+}

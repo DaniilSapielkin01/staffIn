@@ -1,0 +1,134 @@
+@import '../../../assets/sass/partials/_variables';
+
+.tag {
+  position: relative;
+  height: 18px;
+  line-height: 18px;
+  display: inline-table;
+  padding: 0 0.5rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  border-top-right-radius: 0.1rem;
+  border-bottom-right-radius: 0.1rem;
+  margin: 2px 4px 2px 5px;
+  color: $white;
+  opacity: 0.8;
+  transition: 300ms;
+
+  &__title {
+    display: inline-block;
+    line-height: 18px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &__close {
+    display: inline-table;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+    bottom: 1px;
+    margin-left: 0.5rem;
+
+    svg {
+      display: block;
+      height: 0.54rem;
+      width: 0.54rem;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -6px;
+    width: 6px;
+    height: 6px;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-right-width: 6px;
+    border-right-style: solid;
+  }
+
+  &.primary::before {
+    border-right-color: $primary;
+  }
+
+  &.secondary::before {
+    border-right-color: $secondary;
+  }
+
+  &.custom-red {
+    background-color: $tag-red;
+
+    &::before {
+      border-right-color: $tag-red;
+    }
+
+    .tag__close {
+      background: linear-gradient(270deg, $tag-red 60%, $royal-blue-color 100%);
+    }
+  }
+
+  &.custom-blue {
+    background-color: $tag-blue;
+
+    &::before {
+      border-right-color: $tag-blue;
+    }
+
+    .tag__close {
+      background: linear-gradient(270deg, $tag-blue 60%, $royal-blue-color 100%);
+    }
+  }
+
+  &.custom-orange {
+    background-color: $tag-orange;
+
+    &::before {
+      border-right-color: $tag-orange;
+    }
+
+    .tag__close {
+      background: linear-gradient(270deg, $tag-orange 60%, $royal-blue-color 100%);
+    }
+  }
+
+  &.custom-red,
+  &.custom-blue,
+  &.custom-orange {
+    position: relative;
+
+    &:hover {
+      .tag__close {
+        display: block;
+      }
+    }
+
+    .tag__close {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin-left: 0;
+      width: 1.1rem;
+      height: 18px;
+      line-height: 18px;
+      text-align: center;
+      border-top-right-radius: 0.1rem;
+      border-bottom-right-radius: 0.1rem;
+
+      svg {
+        position: relative;
+        bottom: 0.064rem;
+        display: inline-table;
+      }
+    }
+  }
+}

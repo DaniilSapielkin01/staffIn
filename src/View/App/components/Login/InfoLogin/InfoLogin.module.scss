@@ -1,0 +1,54 @@
+.root {
+  height: 100%;
+  width: 100%;
+}
+
+.loginInfo {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.header {
+  font-size: 4.75rem;
+  color: #2977c9;
+  font-weight: 200;
+  letter-spacing: -0.3px;
+}
+
+.info {
+  height: 100%;
+  width: 30%;
+  margin-top: 3rem;
+
+  .headerInfo {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0.3rem;
+    padding: 0.4rem 0.3rem;
+    border: 1px solid #2977c9;
+
+    .headerTitle {
+      position: relative;
+      padding: 0.5rem;
+      color: #2977c9;
+      border-radius: 0 0.6rem 0.6rem 0;
+    }
+  }
+}
+
+.image {
+  display: flex;
+  width: 70%;
+  height: 100%;
+
+  img {
+    height: auto;
+    width: 75%;
+  }
+}

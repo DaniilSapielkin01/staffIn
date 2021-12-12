@@ -1,0 +1,26 @@
+@import '../../../assets/sass/partials/_variables';
+
+.ant-picker {
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  width: 100%;
+
+  &-suffix,
+  &-clear {
+    margin: 0 0.357rem;
+    display: flex;
+    color: $primary-color;
+  }
+
+  &-input > input,
+  &-input > input-docused {
+    outline: 0;
+    font-size: 1rem;
+    color: $primary-color;
+
+    &:focus {
+      border: 0;
+    }
+  }
+}

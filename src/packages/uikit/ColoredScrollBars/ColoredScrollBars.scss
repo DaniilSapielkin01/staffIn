@@ -1,0 +1,21 @@
+@import "../../../assets/sass/partials/variables";
+
+.col-scroll-bar-thumb {
+  background-color: $ligth-alto-color;
+  border-radius: 0.214rem;
+  width: 6px;
+  cursor: pointer;
+  margin: 0 -0.214rem;
+}
+
+.col-scroll-bar-track {
+  width: 1px;
+  top: 7px;
+  right: 8px;
+  bottom: 7px;
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  border-radius: 0.214rem;
+  background-color: $oslo-gray-20-color;
+}

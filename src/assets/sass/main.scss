@@ -1,0 +1,167 @@
+
+@import "./variables";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+//@import "~bootstrap/dist/css/bootstrap-grid.css";
+@import './lib/modals.scss';
+
+/*
+ * JavaScript-specific classes to bind to, must be prefixed with .js-:
+ * <button type="button" class="btn btn-primary js-request-to-book">Request to Book</button>
+ * https://github.com/airbnb/css
+ */
+
+// App
+* {
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+  font-family: $font-family-sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+*:focus {
+  outline: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-content-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+div {
+  outline-color: $primary;
+}
+
+body {
+
+  &.h-100 {
+    main {
+      margin: 0 !important;
+      height: 100%;
+
+      .container {
+        height: 100%;
+      }
+    }
+  }
+}
+
+a {
+  color: $link-color;
+  transition: color $animation-time-short;
+  text-decoration: none;
+}
+
+.rtl * {
+  text-align: right;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+hr {
+  border-top: 1px solid $separator-color;
+}
+
+label, p, .label {
+  font-size: .925rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+.loadingBar {
+  z-index: 9999;
+  background-color: $info-color;
+  height: 3px;
+}
+
+.main-content {
+  margin-top: 100px;
+  position: relative;
+  transition: 0.8s ease;
+  z-index: 1;
+  background: #F9F9FB;
+  height: calc(100vh - 100px);
+  border-left: 1px solid #ECEDEF;
+  padding: 60px;
+}
+
+.text-small {
+  font-size: 0.857rem;
+}
+
+.rounded {
+  border-radius: 50%;
+}
+
+.font-weight-bold {
+  font-weight: 600;
+}
+
+
+.font-weight-semibold {
+  font-weight: 500;
+}
+
+.font-size-15 {
+  font-size: 1.071rem;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.h-50 {
+  height: 50%;
+}
+
+.l-0 {
+  left: 0;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.img-fill {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

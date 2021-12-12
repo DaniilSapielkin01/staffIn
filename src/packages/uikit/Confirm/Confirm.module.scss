@@ -1,0 +1,80 @@
+@import "../../../assets/sass/partials/variables";
+
+.modal_confirm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 550px;
+  position: relative;
+
+  .header {
+    font-weight: 600;
+    font-size: 1.714rem;
+    line-height: 29px;
+    margin-bottom: 13px;
+    color: $black;
+
+    &.successfully {
+      color: $header-color-popup-modal-success;
+    }
+
+    &.error {
+      color: $header-color-popup-modal-fail;
+    }
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 36px 30px 20px 30px;
+    text-align: center;
+    min-width: 350px;
+    min-height: 200px;
+
+    .popupIcon {
+      & .info,
+      & .successfully,
+      & .error {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 25px;
+      }
+    }
+
+    .description {
+      display: block;
+      color: $default-color-text-modal-popup-description;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 400;
+      font-size: 1.143rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .close__icon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+
+  .close__escape {
+    position: absolute;
+    font-size: 10px;
+    top: 22px;
+    left: 2px;
+    color: $default-color-text-modal-popup-description;
+  }
+
+  .actionButtons {
+    padding: 20px 30px;
+    background: #FBFBFE;
+    border-radius: 0 0 1.429rem 1.429rem;
+  }
+}

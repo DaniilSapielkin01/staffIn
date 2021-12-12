@@ -1,0 +1,94 @@
+@import '../../../assets/sass/partials/variables';
+
+.rc-pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+
+  &-item {
+    border: 1px solid $gray-400;
+    outline: none;
+    background-color: $white;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 1px 1px $gray-300;
+    border-radius: 0.286rem;
+    margin: 0 0.143rem;
+
+    &:hover {
+      border-color: $gray-600;
+      box-shadow: none;
+
+      a {
+        color: $gray-600;
+      }
+    }
+
+    a {
+      display: block;
+      color: $gray-600 !important;
+    }
+
+    &-active {
+      border-color: $darken-theme-color;
+      box-shadow: none;
+
+      &:hover a {
+        color: $gray-400;
+      }
+    }
+
+    &-link::after {
+      cursor: not-allowed;
+    }
+  }
+
+  &-prev,
+  &-next {
+    position: relative;
+    box-shadow: 0 1px 1px $gray-300;
+    background-color: $white;
+    margin: 0 0.143rem;
+    width: 30px;
+    height: 30px;
+    border-color: $gray-400;
+    border-radius: 0.286rem;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $gray-600;
+
+    &:hover {
+      border-color: $gray-600;
+      box-shadow: none;
+    }
+  }
+
+  &-disabled {
+    opacity: 0.5;
+    width: 30px;
+    height: 30px;
+    cursor: not-allowed;
+    box-shadow: none;
+
+    &:hover {
+      border-color: $ligth-alto-color;
+    }
+  }
+
+  &-jump-prev,
+  &-jump-next {
+    outline: none;
+    display: flex;
+    justify-content: center;
+
+    &:hover::after {
+      color: $primary;
+    }
+
+    &-link::after {
+      cursor: not-allowed;
+    }
+  }
+}

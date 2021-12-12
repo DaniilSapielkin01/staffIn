@@ -1,0 +1,133 @@
+@import "../../../assets/sass/partials/variables";
+
+.dual-list {
+  background: $white;
+  border: 1px solid $gray-400;
+  border-radius: 0.286rem;
+  width: 200px;
+
+  .header-label {
+    font-size: 0.9rem;
+  }
+
+  .dual-list-item {
+    padding-bottom: 0.214rem;
+    padding-top: 0.214rem;
+    cursor: pointer;
+    border-bottom: 1px solid $white;
+    user-select: none;
+  }
+
+  .selected {
+    background: $black-squeeze-color;
+  }
+}
+
+.bt.arrow-left,
+.bt.arrow-right {
+  border-radius: 0.286rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding-top: 0.25rem;
+  padding-bottom: 0.19rem;
+  position: relative;
+  background: $white;
+  z-index: 0;
+  transition: all $animation-time-short;
+  overflow: visible !important;
+}
+
+.bt.arrow-left {
+  margin-left: 1.071rem;
+  margin-right: 2.143rem;
+  border: 1px solid $green-hover;
+  color: $green-hover;
+
+  &::after {
+    transition: all $animation-time-short;
+    content: "";
+    border-radius: 0.214rem 0.286rem 0.214rem 0.286rem;
+    border-top: 1px solid $green-hover;
+    border-right: 1px solid $green-hover;
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    transform: skew(-10deg, 10deg) rotate(34deg);
+    background: $white;
+    margin-right: -0.714rem;
+    top: 3px;
+    right: 0;
+    z-index: -1;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+
+    &::after {
+      border-color: $green-hover;
+    }
+  }
+
+  &:not(:disabled):hover {
+    border-color: $green-hover;
+    color: $green-hover;
+    background: $black-squeeze-color;
+
+    &::after {
+      border-right: 1px solid $green-hover;
+      border-top: 1px solid $green-hover;
+      border-color: $green-hover !important;
+      background: $black-squeeze-color;
+    }
+  }
+}
+
+.bt.arrow-right {
+  margin-left: 2.143rem;
+  margin-right: 1.071rem;
+  border: 1px solid $danger;
+  color: $danger;
+
+  &::before {
+    transition: all $animation-time-short;
+    content: "";
+    border-radius: 0.214rem 0.286rem 0.214rem 0.286rem;
+    border-bottom: 1px solid $danger;
+    border-left: 1px solid $danger;
+    border-color: $danger !important;
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    transform: rotate(45deg);
+    background: $white;
+    margin-left: -0.714rem;
+    top: 3px;
+    left: 0;
+    z-index: -1;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+
+    &::before {
+      border-color: $gray-400;
+    }
+  }
+
+  &:not(:disabled):hover {
+    border-color: $danger;
+    color: $danger;
+    background: $black-squeeze-color;
+
+    &::before {
+      border-bottom: 1px solid $danger;
+      border-left: 1px solid $danger;
+      border-color: $danger !important;
+      background: $black-squeeze-color;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import '../../../assets/sass/partials/_variables';
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: $border-radius-round;
+  background: $theme-color;
+  overflow: hidden;
+
+  .icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .infoCircle {
+    position: absolute;
+    z-index: 1000;
+    bottom: 2px;
+    right: 2px;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    border-radius: $border-radius-round;
+  }
+
+  [data-status="online"] {
+    background: $info-circle-green;
+  }
+
+  [data-status="offline"] {
+    background: $info-circle-red;
+  }
+
+  [data-status="pending"] {
+    background: $info-circle-yellow;
+  }
+
+
+  .firstLetters {
+    color: $white;
+    font-size: inherit;
+  }
+}

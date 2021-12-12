@@ -1,0 +1,57 @@
+@import '../../../assets/sass/partials/_variables';
+
+.status {
+  min-width: 100px;
+
+  &__inactive {
+    .default-react-select {
+      border-color: $red-hover;
+
+      &__single-value {
+        color: $red-hover;
+      }
+
+      .default-indicators-container {
+        border-top-color: $red-hover;
+      }
+    }
+  }
+
+  &__active {
+    .default-react-select {
+      border-color: $green-hover;
+
+      &__single-value {
+        color: $green-hover;
+      }
+
+      .default-indicators-container {
+        border-top-color: $green-hover;
+      }
+    }
+  }
+
+  .default-react-select__indicators {
+    width: 30px;
+  }
+}
+.custom-select-react {
+
+  &__error-message {
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    border-radius: 0 0 0.25rem 0.25rem;
+    min-height: 28px;
+    padding: 0.286rem 0.714rem;
+    background: #FF555F;
+    color: white;
+    font-size: 0.929rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__border-none {
+    border: none;
+  }
+}

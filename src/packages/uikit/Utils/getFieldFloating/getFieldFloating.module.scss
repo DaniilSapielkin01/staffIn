@@ -1,0 +1,17 @@
+@import '../../../../assets/sass/partials/_variables';
+
+.focus {
+  color: #00A0FF;
+}
+
+.error {
+  color: $error-color;
+}
+
+.default {
+  color: #C9C9D2;
+}
+
+.success {
+  color: #01B075;
+}

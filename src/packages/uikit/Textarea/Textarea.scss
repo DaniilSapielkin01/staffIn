@@ -1,0 +1,40 @@
+@import '../../../assets/sass/partials/_variables';
+
+.textarea {
+  border: 1px solid $gray-400;
+  border-radius: 0.714rem;
+  transition: $input-transition;
+
+  &.is-invalid {
+    color: $error-color !important;
+    border: 1px solid $error-color !important;
+    border-bottom-left-radius: 0 !important;
+  }
+
+  textarea {
+    border: none;
+    overflow: inherit;
+    min-height: 117px;
+    resize: none;
+    background: #FDFDFD;
+
+    &.resize {
+      resize: vertical;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.inside {
+      margin-top: 1.714rem;
+      padding-left: 5px;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  .error {
+    right: 7px;
+    top: 7px;
+  }
+}

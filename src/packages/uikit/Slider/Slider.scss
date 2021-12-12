@@ -1,0 +1,100 @@
+@import '../../../assets/sass/partials/_variables';
+
+.noUi {
+  position: relative;
+
+  label {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  &-connect {
+    background: $green !important;
+  }
+
+  &-target {
+    height: 0.5rem !important;
+    box-shadow: none !important;
+    border-radius: 0.429rem !important;
+    border: 1px solid $gray-400 !important;
+    margin: 1rem 0;
+  }
+
+  &-handle {
+    width: 1rem !important;
+    height: 1rem !important;
+    top: -5px !important;
+    right: -8px !important;
+    outline: none !important;
+    border: 5px solid $green !important;
+    border-radius: 50% !important;
+    box-shadow: $slider-box-shadow !important;
+    cursor: pointer !important;
+
+    &:hover,
+    &:active {
+      width: 1.125rem !important;
+      height: 1.125rem !important;
+      border: 1px solid $green !important;
+      top: -6px !important;
+      right: -9px !important;
+
+      .noUi-touch-area {
+        position: relative !important;
+
+        &::before {
+          content: '' !important;
+          width: 0.5rem !important;
+          height: 0.5rem !important;
+          display: inline-block !important;
+          position: absolute !important;
+          top: 50% !important;
+          left: 50% !important;
+          transform: translate(-50%, -50%) !important;
+          border-radius: 50% !important;
+          background-color: $green !important;
+        }
+      }
+    }
+
+    &:hover .noUi-tooltip {
+      top: 18px !important;
+    }
+
+    &:active .noUi-tooltip {
+      top: auto !important;
+      bottom: 18px !important;
+      color: $green !important;
+    }
+
+    &::before,
+    &::after {
+      display: none !important;
+    }
+  }
+
+  &-tooltip {
+    top: 13px !important;
+    bottom: auto !important;
+    padding: 0;
+    border: none !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    font-family: $font-family-sans-serif;
+    font-weight: 300;
+    font-size: 0.929rem;
+    color: $darken-theme-color;
+  }
+
+  &-minmax {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    bottom: -25px;
+    font-family: $font-family-sans-serif;
+    font-weight: 300;
+    font-size: 0.929rem;
+    color: $gray-600;
+  }
+}

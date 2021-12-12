@@ -1,0 +1,80 @@
+@import '../../../assets/sass/partials/_variables';
+
+.responsive-table {
+  padding-inline-start: 0;
+  background-color: $white;
+  border-radius: 0.25rem 0.25rem 0 0;
+
+  &__row {
+    width: fit-content;
+    border-radius: 0.214rem;
+    justify-content: space-between;
+    vertical-align: middle;
+    border-bottom: 1px solid $border-color-light;
+
+    &.checked {
+      background: lighten($primary, 59);
+    }
+
+    td {
+      padding:1.429rem 0.714rem;
+
+      &:first-child {
+        padding-left: 1.429rem;
+      }
+
+      &:last-child {
+        padding-right: 1.429rem;
+      }
+    }
+  }
+
+  &__header {
+    td {
+      text-transform: uppercase;
+      font-size: 0.76rem;
+      line-height: 0.9rem;
+      color: $secondary-color;
+      white-space: nowrap;
+    }
+  }
+
+  .cell-checkbox {
+    z-index: 1;
+  }
+
+  .table-header {
+    background-color: $white;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: $text-muted;
+  }
+
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+
+    li {
+      display: block;
+    }
+
+    .col {
+      display: flex;
+      flex-basis: 100%;
+      padding: 0.714rem 0;
+
+      &:not(:last-of-type) {
+        border-bottom: 1px solid $text-muted !important;
+      }
+
+      &::before {
+        color: $text-muted;
+        padding-right: 0.714rem;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+      }
+    }
+  }
+}

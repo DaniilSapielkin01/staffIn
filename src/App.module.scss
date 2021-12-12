@@ -1,0 +1,19 @@
+@import "assets/sass/main";
+
+.root {
+  height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.contains {
+  max-width: 70rem;
+}
+
+.App {
+  font-family: "Do Hyeon", sans-serif;
+}
+button {
+  cursor: pointer;
+}

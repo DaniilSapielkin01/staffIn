@@ -1,0 +1,76 @@
+@import '../../../assets/sass/partials/_variables';
+
+.floatingInput {
+  border: none !important;
+  color: $text-color;
+  background: transparent;
+  margin-right: 1.2rem;
+
+  &:focus {
+    outline: none;
+  }
+
+  label {
+    color: #9095A5;
+  }
+}
+
+.errorTextField {
+  border-bottom-left-radius: 0 !important;
+}
+
+.errorMessages {
+  position: relative;
+
+  .errorMessagesItem {
+    position: absolute;
+    z-index: 2;
+    bottom: -27px;
+    border-radius: 0 0 0.25rem 0.25rem;
+    height: 28px;
+    padding: 0.286rem 0.714rem;
+    background: #FF555F;
+    color: white;
+    font-size: 0.929rem;
+  }
+}
+
+.toolType {
+  position: relative;
+}
+
+.toolTypeItem {
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  box-sizing: border-box;
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+  padding: 0.786rem 1.429rem;
+  font-size: 0.875rem;
+}
+
+.popoverAuto {
+  left: -10px !important;
+}
+
+.customArrow {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  border-right: 1px solid rgb(234, 234, 234);
+  border-bottom: 1px solid rgb(234, 234, 234);
+  bottom: 8px;
+  transform: rotate(45deg);
+  background: rgb(255, 255, 255);
+}
+
+.iconBox {
+  position: absolute;
+  right: 18px;
+  top: 0;
+  height: 100%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+

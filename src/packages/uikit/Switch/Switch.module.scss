@@ -1,0 +1,54 @@
+@import '../../../assets/sass/partials/_variables';
+
+.root {
+
+  border: 1px solid #EBEBF8;
+  border-radius: 0.286rem;
+  padding: 0.5rem 0.714rem;
+
+  .reactSwitch {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+
+  .reactSwitchLabel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 2.857rem;
+    height: 1.714rem;
+    background: grey;
+    border-radius: 2.429rem;
+    position: relative;
+    transition: background-color $animation-time-short;
+    margin: 0;
+
+    &.active {
+      background-color: $theme-color;
+    }
+  }
+
+  .reactSwitchButton {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 1.429rem;
+    height: 1.429rem;
+    border-radius: 50%;
+    transition: $animation-time-short;
+    background: $white;
+  }
+
+  .reactSwitch:checked + .reactSwitchLabel .reactSwitchButton {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+  }
+
+  .label {
+    cursor: pointer;
+    padding-right: 1rem;
+  }
+}

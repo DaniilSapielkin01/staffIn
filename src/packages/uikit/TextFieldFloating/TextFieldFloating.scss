@@ -1,0 +1,59 @@
+@import '../../../assets/sass/partials/_variables';
+
+.c-text-field-floating {
+  input {
+    padding-top: 0.429rem;
+  }
+
+  &__w-input {
+    width: 100%;
+    padding: 1.179rem 1rem;
+    background: $white;
+    border: 1px solid $gray-400;
+    border-radius: 0.625rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  &__is-change {
+    border: 1px solid $link-color;
+  }
+
+  &__is-invalid {
+    border: 1px solid $error-color;
+  }
+
+  &__is-success {
+    border: 1px solid #01B075;
+  }
+}
+
+//text field input when not active
+.bCmlkr {
+  padding: 0.214rem 0 !important;
+}
+
+.ilmQEB {
+  top: -3px;
+  left: 2px;
+}
+
+//text field input when active
+.jXgUcd {
+  top: 7px;
+  height: 100%;
+  left: 2px;
+}
+
+.bgWsud {
+  top: 4px;
+  left: 4px;
+  letter-spacing: 0.6px;
+  font-size: 1.09rem;
+  font-weight: 700;
+}
+
+.hqeZFh {
+  padding-top: 0.429rem;
+  left: 3px;
+  padding-left: 0.143rem;
+}
